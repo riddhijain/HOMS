@@ -1,9 +1,10 @@
 <html>
 <head>
   <style>
+
 h1{
   font-size: 30px;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
@@ -21,14 +22,14 @@ table{
   margin-top: 0px;
   width:600px;
   margin-left: 400px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid black;
 }
 th{
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
-  font-size: 13px;
-  color: #fff;
+  font-size: 16px;
+  color: black;
   text-transform: uppercase;
 }
 td{
@@ -36,8 +37,8 @@ td{
   text-align: left;
   vertical-align:middle;
   font-weight: 300;
-  font-size: 14px;
-  color: #fff;
+  font-size: 15px;
+  color:black;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
 
@@ -46,8 +47,9 @@ td{
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body{
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4);
+  /* background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4); */
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   font-family: 'Roboto', sans-serif;
 
 }
@@ -143,9 +145,7 @@ section{
       <tr>
          <th>Mother's contact no</th><td>$motherContact</td
       </tr>
-      <tr>
-          <th>Application Date</th>
-      </tr>
+    
       <tr>
          <th>Leave addrerss</th><td>$place</td
       </tr>

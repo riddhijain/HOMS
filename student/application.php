@@ -171,7 +171,8 @@ $mail->Body = "
   /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
   #outlook a{padding:0;} /* Force Outlook to provide a 'view in browser' message */
   .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
-  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+  .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass
+  , .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
   body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
   table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
   td ul li {
@@ -240,7 +241,7 @@ $mail->Body = "
   h1{
      color:#2e2e2e;
     display:block;
-     font-family:Helvetica;
+  //
      font-size:26px;
      line-height:1.385em;
      font-style:normal;
@@ -262,7 +263,7 @@ $mail->Body = "
   h2{
      color:#2e2e2e;
     display:block;
-     font-family:Helvetica;
+
      font-size:22px;
      line-height:1.455em;
      font-style:normal;
@@ -284,7 +285,7 @@ $mail->Body = "
   h3{
      color:#545454;
     display:block;
-     font-family:Helvetica;
+
      font-size:18px;
      line-height:1.444em;
      font-style:normal;
@@ -306,7 +307,6 @@ $mail->Body = "
   h4{
      color:#545454;
     display:block;
-     font-family:Helvetica;
      font-size:14px;
      line-height:1.571em;
      font-style:normal;
@@ -323,7 +323,7 @@ $mail->Body = "
   h5{
      color:#545454;
     display:block;
-     font-family:Helvetica;
+
      font-size:13px;
      line-height:1.538em;
      font-style:normal;
@@ -340,7 +340,7 @@ $mail->Body = "
   h6{
      color:#545454;
     display:block;
-     font-family:Helvetica;
+
      font-size:12px;
      line-height:2.000em;
      font-style:normal;
@@ -356,7 +356,7 @@ $mail->Body = "
   p {
      color:#545454;
     display:block;
-     font-family:Helvetica;
+
      font-size:16px;
      line-height:1.500em;
      font-style:normal;
@@ -384,7 +384,7 @@ $mail->Body = "
 
   .bodyContent{
     color:#505050;
-    font-family:Helvetica;
+
     font-size:14px;
     line-height:150%;
     padding-top:3.143em;
@@ -395,7 +395,6 @@ $mail->Body = "
   }
   .bodyContentCenter {
     color:#505050;
-    font-family:Helvetica;
     font-size:14px;
     line-height:150%;
     padding-top:0em;
@@ -413,7 +412,7 @@ $mail->Body = "
   }
   .bodyContentImage {
     color:#505050;
-    font-family:Helvetica;
+
     font-size:14px;
     line-height:150%;
     padding-top:0;
@@ -455,7 +454,6 @@ $mail->Body = "
 
   .footerContent{
     color:#808080;
-    font-family:Helvetica;
     font-size:10px;
     line-height:150%;
     padding-top:2.000em;
@@ -596,6 +594,8 @@ $db_con->close();
   <head>
     <meta name=\"viewport" content="width=device-width, initial-scale=1.0">
 <!--<link rel="stylesheet" href="css/login.css">-->
+<link href='//fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <link rel="manifest" href="/manifest.json">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -610,7 +610,7 @@ $db_con->close();
 
 <style>
 body{
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
   font-size: 2em;
 
 }
@@ -628,6 +628,7 @@ body{
   background-color:  #ffa31a;
 }
 </style>
+
   </head>
 <body id="LoginForm" >
 <div class="container">
@@ -636,7 +637,7 @@ body{
 <div class="login-form">
 <div class="main-div">
     <div class="head">
-   <h1>Out-pass Application</h1>
+   <h1>OUT-PASS APPLICATION</h1>
    <p>Fill in the following details</p>
    </div>
     <form id="Login" method="post">

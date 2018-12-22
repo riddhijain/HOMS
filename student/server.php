@@ -24,7 +24,7 @@ if (isset($_POST['login_user'])) {
       echo '<script language="javascript">';
         echo 'alert("successfully logged in")';
         echo '</script>';
-       echo "<script>setTimeout(\"location.href = 'welcome.php';\",1500);</script>";
+       echo "<script>setTimeout(\"location.href = 'welcomestudent.php';\",1500);</script>";
 
   	  $_SESSION['success'] = "You are now logged in";
   	}
