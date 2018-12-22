@@ -116,7 +116,7 @@ $usernamelogged=$_SESSION['usernamelogged'];
 				<div class="navbar-collapse agileits w3layouts collapse hover-effect" id="navbar">
 					<ul class="agileits w3layouts">
 						<li class="agileits w3layouts"><a class="active">Home</a></li>
-						<li class="agileits w3layouts"><a class="scroll" href="">Leave calander</a></li>
+						<li class="agileits w3layouts"><a class="scroll" href="leavecal.html">Leave calander</a></li>
 						<li class="agileits w3layouts"><a class="scroll" href="#team">Rules</a></li>
 						<li class="agileits w3layouts"><a class="scroll" href="#services">Services</a></li>
 						<li class="agileits w3layouts"><a class="scroll" href="#gallery">Announcements</a></li>
