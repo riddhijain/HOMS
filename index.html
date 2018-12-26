@@ -1,49 +1,83 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" >
 
 <head>
   <meta charset="UTF-8">
-  <title>Multistep Form</title>
+  <title>Responsive progress  step bar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
 
       <link rel="stylesheet" href="css/style.css">
 
-
+  
 </head>
 
 <body>
 
-  <form action="#" class="codepen-form" autocomplete="off">
-  <div class="codepen-form__inner">
-    <div class="codepen-form__item form-group active">
-      <input type="datetime" class="form-control" id="form-email">
-      <label for="form-email">Enter Leaving date and time</label>
-    </div>
-    <div class="codepen-form__item form-group">
-      <input type="text" class="form-control" id="form-name">
-      <label for="form-name">Enter your name</label>
-    </div>
-    <div class="codepen-form__item form-group">
-      <input type="text" class="form-control" id="form-phone">
-      <label for="form-phone">Enter your phone number</label>
-    </div>
-    <div class="codepen-form__item form-group">
-      <input type="text" class="form-control" id="form-shoe">
-      <label for="form-shoe">Enter your shoe size</label>
-    </div>
-    <div class="codepen-form__item form-group">
-      <input type="text" class="form-control" id="form-drink">
-      <label for="form-drink">Enter your favorite drink</label>
-    </div>
-    <div class="btn-group">
-      <button type="submit" class="btn btn-primary">Submit</button>
+  <h1 class="title">Responsive Progress Step Bar</h1>
+
+<div class="bar__container">
+  <ul class="bar" id="bar">
+    <li class="active">Competencia</li>
+    <li>Tu público</li>
+    <li>Producto o servicio</li>
+    <li>Comunicación</li>
+    <li>Informe</li>
+  </ul>
+</div>
+
+<section id="cards">
+  <div class="card">
+    <h3 class="card__title">Competencia</h3>
+    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, alias consectetur, iusto non aut, voluptate recusandae saepe amet aperiam libero voluptatum, numquam quia totam. Autem iure nihil iusto quos, consectetur.</p>
+    <div class="actions">
+      <a href="#" class="btn next">Next</a>
     </div>
   </div>
-</form>
 
-      <script  src="js/index.js"></script>
+  <div class="card">
+    <h3 class="card__title">Tu público</h3>
+    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, alias consectetur, iusto non aut, voluptate recusandae saepe amet aperiam libero voluptatum, numquam quia totam. Autem iure nihil iusto quos, consectetur.</p>
+    <div class="actions">
+      <a href="#" class="btn prev">Prev</a>
+      <a href="#" class="btn next">Next</a>
+    </div>
+    </div>
+
+  <div class="card">
+    <h3 class="card__title">Producto o servicio</h3>
+    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, alias consectetur, iusto non aut, voluptate recusandae saepe amet aperiam libero voluptatum, numquam quia totam. Autem iure nihil iusto quos, consectetur.</p>
+    <div class="actions">
+      <a href="#" class="btn prev">Prev</a>
+      <a href="#" class="btn next">Next</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card__title">Comunicación</h3>
+    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, alias consectetur, iusto non aut, voluptate recusandae saepe amet aperiam libero voluptatum, numquam quia totam. Autem iure nihil iusto quos, consectetur.</p>
+    <div class="actions">
+      <a href="#" class="btn prev">Prev</a>
+      <a href="#" class="btn next">Next</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card__title">Informe</h3>
+    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, alias consectetur, iusto non aut, voluptate recusandae saepe amet aperiam libero voluptatum, numquam quia totam. Autem iure nihil iusto quos, consectetur.</p>
+
+    <div class="actions">
+      <a href="#" class="btn prev">Prev</a>
+    </div>
+  </div>
+</section>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
 
 
 

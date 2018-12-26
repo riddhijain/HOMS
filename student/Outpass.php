@@ -8,9 +8,9 @@ if(isset($_POST['Submitreq']))
       require './script/PHPMailer.php';
       require './script/SMTP.php';
 try {
-  $stmt = $db_con->prepare("INSERT INTO requests (username,leaveFrom,leaveTill,place,reason,transport,callfrom,calltill,requestId)
-  VALUES(?,?,?,?,?,?,?,?,?);");
-  $stmt->bind_param("sssssssss", $usernamelogged,$startdate,$enddate,$place,$reason,$transport,$callfrom,$calltill,$id);
+  $stmt = $db_con->prepare("INSERT INTO requests (username,leaveFrom,leaveTill,place,reason,transport,callfrom,calltill,requestId,reqMadeOn)
+  VALUES(?,?,?,?,?,?,?,?,?,?);");
+  $stmt->bind_param("ssssssssss", $usernamelogged,$startdate,$enddate,$place,$reason,$transport,$callfrom,$calltill,$id,$reqMadeOn);
   $usernamelogged=$_SESSION['usernamelogged'];
   $startdate=$_POST['startdate'];
   $enddate=$_POST['enddate'];
@@ -20,6 +20,7 @@ try {
   $callat=$_POST['callat'];
   $len = strlen($usernamelogged);
   $id = substr($usernamelogged,0,$len).'-'.date('dMY');
+  $reqMadeOn=date('dMY');
   $stmt->execute();
   } catch (Exception $e) {
     print('Error: ' . $e->getMessage());

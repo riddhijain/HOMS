@@ -13,7 +13,7 @@ $usernamelogged=$_SESSION['usernamelogged'];
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/popup-box.css" rel="stylesheet" type="text/css" media="all" />
 
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/welcomestudent.css" type="text/css" media="all" />
 <link rel="stylesheet" 	href="css/chocolat.css" type="text/css" media="all">
 <!--// css -->
 <!-- font -->
@@ -129,22 +129,50 @@ $usernamelogged=$_SESSION['usernamelogged'];
 		</div>
 	</div>
 
+	<?php
+	include('connect.php');
+	$sql = mysqli_query($db_con,"SELECT * FROM reqstatus WHERE id LIKE '$usernamelogged%' ");
+		if(!mysqli_num_rows($sql))
+		{
+		?>
 	<div class="banner">
 		<h3>Welcome </h3>
 		<?php
-		include('connect.php');
+
 		$sql = mysqli_query($db_con,"SELECT * FROM student WHERE  username='$usernamelogged'");
 			while($array=mysqli_fetch_array($sql,MYSQLI_ASSOC))
 			{
 		?>
-		<h2 class="wc" ><?php echo $array['firstname']; echo "  "; echo $array['lastname'];?></h2>
-			<?php } ?>
-		<h2><span>Apply for an OutPass </span></h2>
+		<h2><span><?php echo $array['firstname']; echo "  "; echo $array['lastname'];?></span></h2>
+
+	<!--	<h2>Apply for an OutPass</h2> -->
 		<div class="col-md-4" ></div>
 		<div class="col-md-4">
-		<a href="outpass.php" class="btn btn-info btn-lg btn-block" role="button">Here</a>
+		<a href="outpass.php" class="btn btn-info btn-lg btn-block" role="button">Apply For Out-Pass</a>
 		</div>
 		</div>
+	<?php }
+} ?>
+		<?php
+		$sql = mysqli_query($db_con,"SELECT * FROM reqstatus WHERE id LIKE '$usernamelogged%' ");
+			if(mysqli_num_rows($sql)>0)
+			{
+			?>
+			<div class="banner">
+				<h3>Welcome </h3>
+				<?php
+				$sql = mysqli_query($db_con,"SELECT * FROM student WHERE  username='$usernamelogged'");
+					while($array=mysqli_fetch_array($sql,MYSQLI_ASSOC))
+					{
+				?>
+				<h2><span><?php echo $array['firstname']; echo "  "; echo $array['lastname'];?></span></h2>
+				<div class="col-md-4" ></div>
+				<div class="col-md-4">
+				<a href="status.php" class="btn btn-info btn-lg btn-block" role="button">Check Out-Pass Status</a>
+				</div>
+				</div>
+					<?php }
+				} ?>
 <!--
 	<!-- about
 	<div class="about-w3-agile" id="about">

@@ -1,0 +1,165 @@
+@mixin min($brk) {
+  @media all and (min-width: $brk) {
+    @content
+  }
+}
+
+@mixin max($brk) {
+  @media all and (max-width: $brk) {
+    @content
+  }
+}
+
+$active-color: #27AE60;
+//$active-color: #bada55;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {
+  box-sizing: border-box;
+}
+
+// clear fix
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+body {
+  background: #979AAA;
+  font-family: montserrat, arial, verdana;
+}
+
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #020304;
+}
+
+.card {
+  max-width: 500px;
+  width: 90%;
+  background: white;
+  margin: 30px auto;
+  padding:20px 30px;
+  border-radius: 2px;
+  animation-duration: 0.2s;
+    
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  &__text {
+    margin: 25px 0 40px 0;
+    color: grey;
+  }
+  
+  &:not(:first-of-type) {
+    display: none;
+  }
+}
+
+.actions {
+  text-align: center;
+}
+
+.btn {
+  width: 100px;
+  background: $active-color;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  
+  &:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px $active-color;
+  }
+}
+
+.bar__container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.bar {
+  @extend .cf;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  
+  li {
+    list-style-type: none;
+    float: left;
+    width: 20%;
+    position: relative;
+    text-align: center;
+    font-size: 9px;
+    color: white;
+    padding-left: 5px;
+    @include min(500px) {
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+
+    &:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+      color: #333;
+    }
+    
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #ddd;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+    }
+    
+    &:first-child:after {
+      content: none;
+    }
+    
+    &.active:before,{
+      background: $active-color;
+      border: 1px solid lighten($active-color, 30%);
+      color: white;
+    }
+    
+    &.active + li.active:after {
+      background: $active-color;
+    }
+    
+    &.active:first-child + li:after:not(.active) {
+      background: white;
+    }
+  }
+}
+
+
+
